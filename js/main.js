@@ -17,27 +17,41 @@ function getDrink(e) {
 
             for (let i = 0; i < drinkCount; i++) {
 
+
                 const drinkContainer = document.createElement("article")
                 drinkContainer.classList.add('flexCard')
                 drinkContainer.classList.add('slide')
 
-                const drinkImgContainer = document.createElement("div")
+                const drinkwrap = document.createElement('section'
+                )
+                const drinkInfoContainer = document.createElement("div")
+                const drinkInfoLeft = document.createElement("div") 
+                const drinkInfoRight = document.createElement("div")
+
                 const drinkImg = document.createElement("img")
+                
                 const drinkName = document.createElement("h2")
+
                 const drinkInstructions = document.createElement("h3")
                 const drinkSteps = document.createElement("p")
                 const drinkThumb = document.createElement("img")
+                const drinkTcont = document.createElement('div')
 
                 if (i === 0) {
                     drinkContainer.dataset['active'] = true
 
                 }
 
-                drinkImgContainer.classList.add("drinkImgContainer")
+                drinkTcont.classList.add("title")
                 drinkImg.classList.add("drinkImg")
                 drinkThumb.classList.add("drinkThumb")
                 drinkName.classList.add("drinkTitle")
+                drinkInstructions.classList.add("drinkIns")
+                drinkInfoContainer.classList.add("drinkInfoContainer")
+                drinkInfoLeft.classList.add("drinkInfoL")
+                drinkwrap.classList.add('drinkwrap')
 
+                drinkInfoRight.classList.add("drinkInfoR")
 
 
                 drinkName.innerText = data.drinks[i].strDrink
@@ -53,16 +67,24 @@ function getDrink(e) {
                 drinkSteps.innerText = data.drinks[i].strInstructions
 
 
+                drinkTcont.appendChild(drinkImg)
+                drinkTcont.appendChild(drinkName)
+                drinkInfoLeft.appendChild(drinkInstructions)
+                     
+                drinkInfoRight.appendChild(drinkSteps)
+               // drinkInfoRight.appendChild(drinkThumb)
+          
+                drinkwrap.appendChild(drinkTcont)
+                drinkInfoContainer.appendChild(drinkInfoLeft)
+                drinkInfoContainer.appendChild(drinkInfoRight)
 
+                
+               
 
-                drinkImgContainer.appendChild(drinkImg)
-
-
-                drinkContainer.appendChild(drinkImgContainer)
-                drinkContainer.appendChild(drinkName)
-                drinkContainer.appendChild(drinkInstructions)
-                drinkContainer.appendChild(drinkSteps)
-                drinkContainer.appendChild(drinkThumb)
+                drinkwrap.appendChild(drinkInfoContainer)
+                
+               
+                drinkContainer.appendChild(drinkwrap)
 
                 main.appendChild(drinkContainer)
 
