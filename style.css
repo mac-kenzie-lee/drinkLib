@@ -113,15 +113,15 @@ Layout
 }
 
 .carousel {
-    width: 100vw;
-    height: 10vh;
+    width: 25vw;
+    height: 100vh;
     position: relative;
 }
 
 .slide {
     display: block;
     position: absolute;
-    inset: 0;
+    inset: 0;s
     opacity: 0;
 }
 
@@ -225,4 +225,10 @@ body {
 
 .show {
     opacity: 1;
+}
+
+
+.flex {
+    background-color: orange;
+    height: 100px;
 }
