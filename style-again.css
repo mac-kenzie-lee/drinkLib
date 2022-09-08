@@ -1,132 +1,201 @@
 html {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 body {
-    background-color: red;
-    margin: 0;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-
+  background-color: red;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+*::before,
+*::after {
+  display: block;
+  position: relative;
 }
 
-*{
-    box-sizing: border-box;
+* {
+  padding-top: 1px;
+  margin-top: 1px;
+  position: relative;
+  box-sizing: border-box;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 /* 
 navigation header */
 nav#nav {
-    background-color: rebeccapurple;
+  width: 100%;
+  background-color: rebeccapurple;
 }
 /*same*/
-ul#flexul.flex-ul { background-color: orange;
-    
+ul#flexul.flex-ul {
+  background-color: orange;
 }
 ul#flexul.flex-ul.flexulafter {
-    background-color: salmon;
-    
+  background-color: salmon;
 }
 /*same end*/
 
-li.flex-li
-{
-    background-color: rosybrown;
+li.flex-li {
+  background-color: rosybrown;
 }
 li.flex-li.findDrink {
-    color: red;
-    
-    /*empty li?*/
+  color: red;
+
+  /*empty li?*/
 }
 form#formli.formli {
-    background-color: dodgerblue;
-    
+  background-color: dodgerblue;
 }
 form#formli.formli.formliafter {
-    background-color: aqua;
+  background-color: aqua;
 }
 input {
-    background-color: brown;
+  background-color: brown;
 }
 button#formlibtn.formlibtnafter {
-background-color: yellow;
+  background-color: yellow;
 }
-i.meep.fa-solid.fa-martini-glass{
-    background-color: peachpuff;
-} 
+i.meep.fa-solid.fa-martini-glass {
+  background-color: peachpuff;
+}
 
 /* 
 main content area */
 div#fullbar.wrap.carousel {
-    background-color: yellow;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
 }
-    button#slideBack.show {
-        background-color: plum;
-    }
-    main.flex{
-        background-color: teal;
-    }
-    /*slides*/
-    article.flexCard.slide {
-        background-color: aquamarine;
-        display: none;
-    }
-    article.flexCard.slide[data-active] {
-        display: block;
-    }
-        section.drinkwrap {
-            background-color: orange;
-        }
-            div.title{
-                background-color: palevioletred;
-            }
-                img.drinkImg{
-                    background-color: red;   
-                    width:300px;
-                }
-                h2.drinkTitle{
-                    background-color: blue;
-                }
-            div.drinkInfoContainer{
-                background-color: green;
-            }
-                div.drinkInfoL{
-                    background-color: aquamarine
-                }
-                    p.drinkGlass{
-                        background-color: lime;
-                    }
-                    h2.ingredH{
-                        background-color: aquamarine;
-                    }
-                    ul{
-                        background-color: beige
-                    }
-                        li.ingredLi{
-                            background-color: chartreuse
-                        };
-                    p{
-                        background-color: red;
-                    }
 
-                div.drinkInfoR{
-                    background-color: violet;
-                }
-                    h3.drinkIns{
-                        background-color: tomato;
-                    }
-                    p{
-                        background-color: steelblue;
-                    }
-                    
-    button.#slideFront.show{
-        background-color: thistle;
-    }
+.hide {
+  display: none;
+}
+button#slideBack.show {
+  background-color: plum;
+  position: absolute;
+  top: 40vh;
+  right: 0;
+  z-index: 2;
+  left: -0;
+  padding: 1rem;
+  border-radius: 100%;
+}
+main.flex {
+  padding: 3rem;
+  background-color: teal;
+  width: 95vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+/*slides*/
+article.flexCard.slide {
+  align-self: center;
+  width: 100%;
+  background-color: aquamarine;
+  border-radius: 20px;
+  display: none;
+}
 
+article.flexCard.slide[data-active] {
+  display: inline-block;
+}
+section.drinkwrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+div.title {
+  clear: both;
+  display: flex;
+  margin: 0 auto;
+
+  flex-direction: column;
+
+  align-content: center;
+
+ 
+}
+img.drinkImg {
+  background-color: red;
+  width: 80%;
+  justify-self: center;
+  margin: 1rem auto;
+  border-radius: 100%;
+  min-width: 150px;
+}
+h2.drinkTitle {
+  background-color: blue;
+
+  width: 100%;
+  margin: 0 auto;
+  font-size: 4em;
+  text-align: center;
+}
+div.drinkInfoContainer {
+  display: flex;
+  background-color: green;
+  flex-direction: column;
+  /*adjust for mobile*/
+
+}
+/*padding*/
+div.drinkInfoL, div.drinkInfoR, h2.drinkTitle { padding: 1rem;}
+
+div.drinkInfoL {
+  background-color: aquamarine;
+
+  
+}
+p.drinkGlass {
+  background-color: lime;
+  text-align: center;
+}
+h2.ingredH {
+  background-color: aquamarine;
+  text-transform: lowercase;
+}
+ul {
+  background-color: beige;
+  text-transform: lowercase;
+}
+li.ingredLi {
+  background-color: chartreuse;
+}
+p {
+  background-color: red;
+}
+
+div.drinkInfoR {
+  background-color: violet;
+}
+h3.drinkIns {
+  background-color: tomato;
+}
+p {
+  background-color: steelblue;
+}
+
+button#slideFront.show {
+  background-color: plum;
+  position: absolute;
+  top: 40vh;
+  right: 0;
+  z-index: 2;
+  padding: 1rem;
+  border-radius: 100%;
+}
 
 /*
     body {
