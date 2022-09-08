@@ -1,0 +1,177 @@
+html {
+    font-size: 12px;
+}
+
+body {
+    background-color: red;
+    margin: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+/* 
+navigation header */
+nav#nav {
+    background-color: rebeccapurple;
+}
+/*same*/
+ul#flexul.flex-ul { background-color: orange;
+    
+}
+ul#flexul.flex-ul.flexulafter {
+    background-color: salmon;
+    
+}
+/*same end*/
+
+li.flex-li
+{
+    background-color: rosybrown;
+}
+li.flex-li.findDrink {
+    color: red;
+    
+    /*empty li?*/
+}
+form#formli.formli {
+    background-color: dodgerblue;
+    
+}
+form#formli.formli.formliafter {
+    background-color: aqua;
+}
+input {
+    background-color: brown;
+}
+button#formlibtn.formlibtnafter {
+background-color: yellow;
+}
+i.meep.fa-solid.fa-martini-glass{
+    background-color: peachpuff;
+} 
+
+/* 
+main content area */
+div#fullbar.wrap.carousel {
+    background-color: yellow;
+}
+    button#slideBack.show {
+        background-color: plum;
+    }
+    main.flex{
+        background-color: teal;
+    }
+    /*slides*/
+    article.flexCard.slide {
+        background-color: aquamarine;
+        display: none;
+    }
+    article.flexCard.slide[data-active] {
+        display: block;
+    }
+        section.drinkwrap {
+            background-color: orange;
+        }
+            div.title{
+                background-color: palevioletred;
+            }
+                img.drinkImg{
+                    background-color: red;   
+                    width:300px;
+                }
+                h2.drinkTitle{
+                    background-color: blue;
+                }
+            div.drinkInfoContainer{
+                background-color: green;
+            }
+                div.drinkInfoL{
+                    background-color: aquamarine
+                }
+                    p.drinkGlass{
+                        background-color: lime;
+                    }
+                    h2.ingredH{
+                        background-color: aquamarine;
+                    }
+                    ul{
+                        background-color: beige
+                    }
+                        li.ingredLi{
+                            background-color: chartreuse
+                        };
+                    p{
+                        background-color: red;
+                    }
+
+                div.drinkInfoR{
+                    background-color: violet;
+                }
+                    h3.drinkIns{
+                        background-color: tomato;
+                    }
+                    p{
+                        background-color: steelblue;
+                    }
+                    
+    button.#slideFront.show{
+        background-color: thistle;
+    }
+
+
+/*
+    body {
+        background-color: red;
+    }
+
+        nav#nav {
+            background-color: rebeccapurple;
+        }
+            ul.#flexul.flex-ul.flexulafter {
+    
+            }
+            li.flex-li
+            {}
+            li.flex-li.findDrink {}
+                 form.#formli.formLi.formafter {}
+                    input {}
+                    button.#formlibtn.formlibtnafter {}
+                        i.meep.fa-solid.fa-martini-glass{} 
+                    
+
+    div.#fullbar.wrap.carousel {}
+        button.#slideBack.show {}
+        main.flex{}
+
+        article.flexCard.slide {}
+            section.drinkwrap {}
+                div.title{}
+                    img.drinkImg{}
+                    h2.drinkTitle{}
+                div.drinkInfoContainer{}
+                    div.drinkInfoL{}
+                        p.drinkGlass{}
+                        h2.ingredH{}
+                        ul{}
+                            li.ingredLi{};
+                        p{}
+    
+                    div.drinkInfoR{}
+                        h3.drinkIns{}
+                        p{}
+                        
+    
+    
+    
+    
+        button.#slideFront.show{}
+    */

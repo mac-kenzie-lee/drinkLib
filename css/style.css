@@ -1,289 +1,346 @@
 html {
-
 }
 
-* {
-    box-sizing: border-box;
-    background-color: #FCF9F2;
-    margin: 0;
+body {
+  box-sizing: border-box;
+  background-color: #fcf9f2;
+  margin: 0;
 }
 
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-
 .drinkImg {
-    /*pixels are fixed width
+  /*pixels are fixed width
     /*aspect ratio object-fit preserves ratio*/
-    object-fit: cover;
-    /*object fit keeps aspect ratio */
-    width: 100%;
-    border-radius: 100%;;
-    display: block;
+  object-fit: cover;
+  /*object fit keeps aspect ratio */
+  width: 100%;
+  border-radius: 100%;
+  display: block;
 }
 
 .flexCard {
-
-
-    transition: 200ms opacity ease-in-out;
-
-
+  transition: 200ms opacity ease-in-out;
 }
-
 
 /*********************
 Layout
 */
 
 .drinkTitle {
-    font-size: 2rem;
-    padding: 1rem;
-    align-self: flex-start;
-    font-family: 'Viaoda Libre', cursive;
-    color: #5995B8;
+  font-size: 2rem;
+  padding: 1rem;
+  align-self: flex-start;
+  font-family: "Viaoda Libre", cursive;
+  color: #5995b8;
 }
 
 .flex-ul {
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+
+
 }
 
 .flex-ul form input {
-    font-family: 'Federo', sans-serif;
-    color: rgba(34, 72, 51, 0.42);
-    letter-spacing: -0.06em;
-    font-style: normal;
-    font-weight: 400;
-    background: #FFFFFF;
-    border: 1px solid #D9D9D9;
-    border-radius: 25px;
-    height: 3rem;
-    width: 17rem;
-    padding: 1rem;
-    margin: 1rem;
-    text-align: center;
+  font-family: "Federo", sans-serif;
+  color: rgba(34, 72, 51, 0.42);
+  letter-spacing: -0.06em;
+  font-style: normal;
+  font-weight: 400;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 25px;
+
+  width: 17rem;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
 }
 
 .meep {
-    color: rgb(117, 117, 117);
-    font-size: 1.3rem;
-    padding: 3rem;
-    width: 100px;
-    height: 100px;
+  color: rgb(117, 117, 117);
+  font-size: 1.3rem;
+  padding: 3rem;
+  width: 100px;
+  height: 100px;
 }
 
 .flex-ul form *:hover {
-    color: #5995B8 !important;
+  color: #5995b8 !important;
 }
 
 .flex-ul form button {
-    border: none;
+  border: none;
 }
 
 .flex-li h1 {
-    color: #5995B8;
-    font-family: 'Viaoda Libre', cursive;
-    font-size: 5rem;
-    font-weight: 500;
-    letter-spacing: 0.01em;
+  color: #5995b8;
+  font-family: "Viaoda Libre", cursive;
+  font-size: 5rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
 .formli {
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    flex-direction: column;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-direction: column;
 }
 
-.flex-li>form *:first-child {
-    padding: 0.1rem;
-    margin: 0.5rem;
-    font-weight: 700;
-    text-transform: lowercase;
-    letter-spacing: 0.3ch;
+.flex-li > form *:first-child {
+  padding: 0.1rem;
+  margin: 0.5rem;
+  font-weight: 700;
+  text-transform: lowercase;
+  letter-spacing: 0.3ch;
 }
 
-.flex-li>form *:first-child:hover {
-    color: gray;
+.flex-li > form *:first-child:hover {
+  color: rgb(46, 31, 31);
 }
 
 .carousel {
-    width: 100%;
-    height: 100%;
-
+  width: 100%;
+  height: 100%;
 }
 
 .slide {
-
-    position: absolute;
-    margin:1%  auto;
-   width: 100%;
-    opacity: 0;
-
+  position: absolute;
+  margin: 1% auto;
+  width: 100%;
+  opacity: 0;
 }
 
 .slide img {
-    display: block;
-    /*mainpic*/
-    width: 30vw;
-   
-  
-    object-fit: cover;
-    object-position: center;
+  display: block;
+  /*mainpic*/
+  width: 30vw;
+  margin-left: 1rem;
+
+  object-fit: cover;
+  object-position: center;
 }
 
-
-
 .slide[data-active] {
-    opacity: 1;
-    transition-delay: 0ms;
+  opacity: 1;
+  transition-delay: 0ms;
 }
 
 #slideBack,
 #slideFront {
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    position: absolute;
+  position: absolute;
 
-    border: none;
-    font-size: xx-large;
-    z-index: 2;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50);
-    color: rgba(0, 0, 0, 0.569);
-    cursor: pointer;
-    border-radius: 23px;
-    background-color: #5995b8a1;
-    display: block;
-    padding: 0px 12px;
+  border: none;
+  font-size: xx-large;
+  z-index: 2;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50);
+  color: rgba(0, 0, 0, 0.569);
+  cursor: pointer;
+  border-radius: 23px;
+  background-color: #5995b8a1;
+  display: block;
+  padding: 0px 12px;
 
-    margin: 0 1rem;
-    text-align: center;
+  margin: 0 1rem;
+  text-align: center;
 }
 
 #slideBack:hover,
 #slideFront:hover,
 #slideBack:focus,
 #slideFront:focus {
-    color: rgb(255, 255, 255);
-    background-color: #346581a1;
+  color: rgb(255, 255, 255);
+  background-color: #346581a1;
 }
 
 #slideBack:focus,
 #slideFron:focus {
-    outline: 1px solid black;
+  outline: 1px solid black;
 }
 
 #slideBack {
-    right: auto;
+  right: auto;
 }
 
 #slideFront {
-    left: auto;
+  left: auto;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .flexCard[data-active] {
-    opacity: 1;
-    transition-delay: 200ms;
+  opacity: 1;
+  transition-delay: 200ms;
 }
-
 
 /*after search menubar*/
 
 .flexulafter {
-    flex-direction: row;
-    margin: 1.5rem 0 0 0;
-    padding: 0;
-    height: 15vh;
-    justify-content: space-around;
+  flex-direction: row;
+  margin: 1.5rem 0 0 0;
+  padding: 0;
+  height: 15vh;
+  justify-content: space-around;
 }
 
 .formliafter {
-    justify-content: baseline;
-    gap: 0;
-    flex-direction: row;
-    height: 10%;
-    align-items: baseline;
+  justify-content: baseline;
+  gap: 0;
+  flex-direction: row;
+  height: 10%;
+  align-items: baseline;
 }
 
 .formlibtnafter {
-    height: 10%;
+  height: 10%;
 }
 
 .hide {
-    display: none;
-    visibility: hidden;
+  display: none;
+  visibility: hidden;
 }
 
 .show {
-    opacity: 1;
+  opacity: 1;
 }
-
-
 
 .drinkInfoR {
   padding: 10px;
 }
 
 .drinkInfoContainer {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: row;
+}
+
+.drinkInfoContainer > * {
+  width: 50%;
 }
 
 .flexCard {
-    padding: 1rem;
-}
-
-
-.title {
-
-    display: flex;
-    flex-direction:row;
-    
+  padding: 1rem;
 }
 
 .title {
-  
-    display: flex;
+  display: flex;
+  flex-direction: row;
+}
 
-    justify-content: center;
-    align-items: center;
+.title {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
 }
 
 .flexCard {
-    height: 80%;
+  height: 80%;
+  background-color: rebeccapurple;
+ 
+  border-radius: 25px;
+  height: min-content;
+
 }
 .drinkwrap {
-    display: flex;
+  display: flex;
   flex-direction: column;
   gap: 1rem;
   margin: 0 2rem;
-    height: 100%;
-    
+  height: 100%;
+  
 }
 
 .drinkTitle {
-    width: 100%;
-    font-family: 'Ms Madi', cursive;
-    font-size: 6rem;
-    text-align: center;
-    font-weight: 100;
-    color: rgb(150, 151, 76);
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+  width: 100%;
+  font-family: "Ms Madi", cursive;
+  font-size: 6rem;
+  text-align: center;
+  font-weight: 100;
+  color: rgb(150, 151, 76);
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
+
+.ingredH {
+  font-size: 1.2rem;
+  font-family: "Federo", sans-serif;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.ingredLi {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  text-decoration: underline;
+  font-family: "Federo", sans-serif;
+  line-height: 1.3ch;
+  text-underline-offset: 0.3rem;
+}
+.drinkGlass {
+  margin-top: 1rem;
+  font-family: "Federo", sans-serif;
+  text-align: justify;
+  color: rgb(55, 0, 255);
+  font-weight: 500;
+  font-style: oblique;
+}
+
+.drinkInfoL {
+  margin: 2rem;
+}
+
+
+
+.fa, .fa-brands, .fa-classic, .fa-regular, .fa-sharp, .fa-solid, .fab, .far, .fas {
+    display: inline;
+  
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+
+@media only screen and (min-width: 500px) {
+    body {
+        background-color: red;
+    }
+
+    .flex-ul {
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .flex-ul form input {
+        font-family: "Federo", sans-serif;
+        color: rgba(34, 72, 51, 0.42);
+        letter-spacing: -0.06em;
+        font-style: normal;
+        font-weight: 400;
+        background: #ffffff;
+        border: 1px solid #d9d9d9;
+        border-radius: 25px;
+        height: 3rem;
+        width: 17rem;
+        padding: 1rem;
+        margin: 1rem;
+        text-align: center;
+      }
+    }

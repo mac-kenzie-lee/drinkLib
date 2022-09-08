@@ -27,6 +27,11 @@ function getDrink(e) {
                 const drinkInfoContainer = document.createElement("div")
                 const drinkInfoLeft = document.createElement("div") 
                 const drinkInfoRight = document.createElement("div")
+                const drinkGlass = document.createElement("p")
+                const drinkIngredH = document.createElement('h3')
+                const drinkIngred = document.createElement("ul")
+                const drinkIndredlist = document.createElement("p")
+                
 
                 const drinkImg = document.createElement("img")
                 
@@ -36,17 +41,38 @@ function getDrink(e) {
                 const drinkSteps = document.createElement("p")
                 const drinkThumb = document.createElement("img")
                 const drinkTcont = document.createElement('div')
+                
 
+
+                drinkIngredH.innerText = "Ingredients To use:"
+                drinkIngredH.classList.add('ingredH')
                 if (i === 0) {
                     drinkContainer.dataset['active'] = true
 
                 }
 
+                drinkGlass.innerText = "Use a " + data.drinks[i].strGlass
+                drinkGlass.classList.add('drinkGlass')
+                let ingred = "";
+                for (let k = 1; k <= 15; k++) {
+                    let va = "strIngredient" + k;
+                    if(data.drinks[i][va] !== null) {
+                        
+                        let ki = data.drinks[i][va];
+          
+                        let pi = document.createElement("li");
+                        pi.classList.add("ingredLi");
+                        pi.innerText = ki;
+                        drinkIngred.appendChild(pi)
+                    }
+                }
+  
                 drinkTcont.classList.add("title")
                 drinkImg.classList.add("drinkImg")
                 drinkThumb.classList.add("drinkThumb")
                 drinkName.classList.add("drinkTitle")
                 drinkInstructions.classList.add("drinkIns")
+
                 drinkInfoContainer.classList.add("drinkInfoContainer")
                 drinkInfoLeft.classList.add("drinkInfoL")
                 drinkwrap.classList.add('drinkwrap')
@@ -69,12 +95,20 @@ function getDrink(e) {
 
                 drinkTcont.appendChild(drinkImg)
                 drinkTcont.appendChild(drinkName)
-                drinkInfoLeft.appendChild(drinkInstructions)
+                drinkInfoLeft.appendChild(drinkGlass)
+                
+                drinkInfoLeft.appendChild(drinkIngredH)
+                drinkInfoLeft.appendChild(drinkIngred)
+                drinkInfoLeft.appendChild(drinkIndredlist)
+
+                drinkInfoRight.appendChild(drinkInstructions)
                      
                 drinkInfoRight.appendChild(drinkSteps)
                // drinkInfoRight.appendChild(drinkThumb)
           
                 drinkwrap.appendChild(drinkTcont)
+
+
                 drinkInfoContainer.appendChild(drinkInfoLeft)
                 drinkInfoContainer.appendChild(drinkInfoRight)
 
