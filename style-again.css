@@ -16,6 +16,11 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
+a {
+    text-decoration: none;
+    color: var(--main-color-three);
+}
+
 *::before,
 *::after {
   display: block;
@@ -261,6 +266,7 @@ line-height: 1.7rem;
 font-family: sans-serif;
 text-indent: 0.5rem;
 text-align: left;
+
 }
 
 button#slideFront.show {
