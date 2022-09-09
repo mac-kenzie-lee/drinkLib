@@ -1,9 +1,15 @@
 html {
   font-size: 12px;
+  --main-bg-color:#f4f1de;
+  --main-color-one: #5f0f40;
+  --main-color-two: #fff;
+  --main-color-three:#03045e;
 }
-
+h1 {
+    margin: 0;
+}
 body {
-  background-color: red;
+    background-color: var(--main-bg-color);
   margin: 0;
   display: flex;
   flex-direction: row;
@@ -17,8 +23,7 @@ body {
 }
 
 * {
-  padding-top: 1px;
-  margin-top: 1px;
+
   position: relative;
   box-sizing: border-box;
 }
@@ -32,45 +37,84 @@ ul {
 navigation header */
 nav#nav {
   width: 100%;
-  background-color: rebeccapurple;
+
 }
 /*same*/
-ul#flexul.flex-ul {
-  background-color: orange;
+ul#flexul.flex-ul *:hover {
+    color: var(--main-color-three)
+
 }
 ul#flexul.flex-ul.flexulafter {
-  background-color: salmon;
+
 }
 /*same end*/
 
-li.flex-li {
-  background-color: rosybrown;
-}
-li.flex-li.findDrink {
-  color: red;
+li.flex-li:first-child { /*header text drinklib*/
+    color: var(--main-color-one);
+ 
+    font-family: "Viaoda Libre", cursive;
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 1rem 1rem 0 1rem;
+    margin: 0;
+    letter-spacing: 0.01em;
+    text-transform: none;
 
-  /*empty li?*/
 }
+
 form#formli.formli {
-  background-color: dodgerblue;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding-bottom: 0.75rem;
+
+
 }
 form#formli.formli.formliafter {
-  background-color: aqua;
+/*mobile adjust?*/
+
+
 }
 input {
-  background-color: brown;
+letter-spacing: 0.6ch;
+font-family: "Federo", sans-serif;
+  color: rgba(34, 72, 51, 0.42);
+  font-style: normal;
+  font-weight: 400;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 25px;
+  padding: 0.76rem;
+  min-width: fit-content;
+width:50%;
+  text-align: center;
 }
 button#formlibtn.formlibtnafter {
-  background-color: yellow;
+ border: none;   
+background-color:#ffffff00;
 }
 i.meep.fa-solid.fa-martini-glass {
-  background-color: peachpuff;
+
+  color: rgb(117, 117, 117);
+  font-size: 1.3rem;
+  padding: 1rem 1rem 1rem 0;
+  background-color:#ffffff00;
+  border: none;
 }
 
+button#formlibtn, 
+button#formlibtn:hover, 
+button#formlibtn:active {
+    background-color:#ffffff00; border: none;   
+    
+}
 /* 
 main content area */
 div#fullbar.wrap.carousel {
-  background-color: yellow;
+
   display: flex;
   align-items: center;
 }
@@ -79,18 +123,21 @@ div#fullbar.wrap.carousel {
   display: none;
 }
 button#slideBack.show {
-  background-color: plum;
+
   position: absolute;
   top: 40vh;
-  right: 0;
+  cursor: pointer;
+border: none;
   z-index: 2;
   left: -0;
+  background-color: #030300;
   padding: 1rem;
+  color: white;
   border-radius: 100%;
 }
 main.flex {
-  padding: 3rem;
-  background-color: teal;
+  padding: 0 3rem;
+
   width: 95vw;
   justify-content: center;
   align-items: center;
@@ -100,13 +147,17 @@ main.flex {
 article.flexCard.slide {
   align-self: center;
   width: 100%;
-  background-color: aquamarine;
+  padding: 1.5rem;
+  background-color: var(--main-color-two);
   border-radius: 20px;
+
   display: none;
+
 }
 
 article.flexCard.slide[data-active] {
   display: inline-block;
+  opacity: 1;
 }
 section.drinkwrap {
   display: flex;
@@ -116,6 +167,7 @@ section.drinkwrap {
 
 
 }
+
 div.title {
   clear: both;
   display: flex;
@@ -128,7 +180,7 @@ div.title {
  
 }
 img.drinkImg {
-  background-color: red;
+
   width: 80%;
   justify-self: center;
   margin: 1rem auto;
@@ -136,8 +188,11 @@ img.drinkImg {
   min-width: 150px;
 }
 h2.drinkTitle {
-  background-color: blue;
 
+
+    font-family: "Ms Madi", cursive;
+ 
+    color:var(--main-color-three);
   width: 100%;
   margin: 0 auto;
   font-size: 4em;
@@ -145,58 +200,94 @@ h2.drinkTitle {
 }
 div.drinkInfoContainer {
   display: flex;
-  background-color: green;
+  font-family: "Federo", sans-serif;
+
   flex-direction: column;
   /*adjust for mobile*/
 
 }
-/*padding*/
-div.drinkInfoL, div.drinkInfoR, h2.drinkTitle { padding: 1rem;}
+ h2.drinkTitle{ padding: 1rem;}
 
 div.drinkInfoL {
-  background-color: aquamarine;
-
-  
+    text-transform: uppercase;
 }
+
 p.drinkGlass {
-  background-color: lime;
-  text-align: center;
+text-transform: none;
+  text-align: left;
+  color: var(--main-color-one);
+  font-size: 1.2em;
+  font-weight: 600;
+  font-style: oblique;
+  text-indent: 0.5rem;
+  letter-spacing: 0.2ch;;
 }
 h2.ingredH {
-  background-color: aquamarine;
+
   text-transform: lowercase;
+
 }
-ul {
-  background-color: beige;
-  text-transform: lowercase;
+.drinkInfoL ul { display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    color:var(--main-color-three);
+    
+
 }
 li.ingredLi {
-  background-color: chartreuse;
+
 }
 p {
-  background-color: red;
+
 }
 
 div.drinkInfoR {
-  background-color: violet;
+
 }
-h3.drinkIns {
-  background-color: tomato;
+h3.drinkIns, .ingredH {
+-moz-text-decoration-style: wavy;
+text-decoration-style: dashed;
+line-height: 1rem;
+text-decoration-color: rgb(4, 78, 214);
+text-decoration-line:underline;
+text-decoration-thickness: 0.2rem;
+text-decoration-skip-ink:var(--main-color-one);
+text-indent: 0.1rem;
+text-underline-offset: 0.4rem;
 }
-p {
-  background-color: steelblue;
+.drinkInfoR p {
+color: var(--main-color-three);
+line-height: 1.7rem;
+font-family: sans-serif;
+text-indent: 0.5rem;
+text-align: left;
 }
 
 button#slideFront.show {
-  background-color: plum;
+    cursor: pointer;
   position: absolute;
   top: 40vh;
   right: 0;
   z-index: 2;
+  background-color:#030300;
+  color: white;
   padding: 1rem;
   border-radius: 100%;
+  border:none;
+  
+}
+#slideBack:hover,
+#slideFront:hover,
+#slideBack:focus,
+#slideFront:focus {
+  color: rgb(255, 255, 255);
+  background-color: #346581a1;
 }
 
+#slideBack:focus,
+#slideFron:focus {
+  outline: 1px solid black;
+}
 /*
     body {
         background-color: red;

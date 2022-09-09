@@ -44,7 +44,7 @@ function getDrink(e) {
                 
 
 
-                drinkIngredH.innerText = "Ingredients To use:"
+                drinkIngredH.innerText = "Ingredients:"
                 drinkIngredH.classList.add('ingredH')
                 if (i === 0) {
                     drinkContainer.dataset['active'] = true
@@ -89,7 +89,7 @@ function getDrink(e) {
 
 
                 drinkImg.alt = data.drinks[i].strDrink + " in a glass"
-                drinkInstructions.innerText = "How to make: "
+                drinkInstructions.innerText = "How to make it:"
                 drinkSteps.innerText = data.drinks[i].strInstructions
 
 
@@ -158,6 +158,13 @@ function getDrink(e) {
                     }
 
                     slides.children[newIndex].dataset['active'] = true
+                    
+                    slides.children[newIndex].style.opacity = 0;
+                    setTimeout(() => {
+                        slides.children[newIndex].style.opacity = 1;
+                    }, this.animationDelay + 20)
+                    slides.children[newIndex].style.transition = "200ms opacity ease-in-out";
+                  
                     delete activeSlide.dataset[
                         'active'
                     ]
