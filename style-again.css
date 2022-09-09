@@ -294,6 +294,27 @@ button#slideFront.show {
 #slideFron:focus {
   outline: 1px solid black;
 }
+
+.nodrinky {
+    color: var(--main-color-one);
+    margin-top: 4rem;
+}
+
+.nodrinky h2 {
+    font-size: 3rem;font-family: "Federo", sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+
+}
+.nodrinky p {
+    font-family: sans-serif;
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.8rem;
+    letter-spacing: 0.12ch;
+    font-size: 1.2rem;
+} 
 /*
     body {
         background-color: red;

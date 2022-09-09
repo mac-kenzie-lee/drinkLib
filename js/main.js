@@ -1,7 +1,16 @@
 //The user will enter a cocktail. Get a cocktail name, photo, and instructions and place them in the DOM
-const isDrunk = {drunk:0}
+const isDrunk = {drunk:0, noDrink:false}
 document.querySelector('form').addEventListener('submit', getDrink)
 
+document.querySelector('form').addEventListener('click', (f) => {
+   if (isDrunk.noDrink === true) {
+    document.querySelector(".nodrinky").remove()
+    isDrunk.noDrink = false;
+   }
+    if (isDrunk.drunk > 0) {
+        f.target.value = ""
+
+    }})
 
 document.querySelector('form').addEventListener('submit', (d) => {
 if (isDrunk.drunk > 0) {
@@ -20,6 +29,7 @@ function getDrink(e) {
         .then(res => res.json())
         .then(data => {
 
+
        drunk(data)
        isDrunk.drunk++;
 
@@ -30,8 +40,27 @@ function getDrink(e) {
 
 }
 
-function drunk(data) { let drinkCount = data.drinks.length
-    console.log('drinkity drank ' + drinkCount)
+function noDrinksFound(){
+
+    const noDrinks = document.createElement("div")
+    noDrinks.classList.add('nodrinky')
+    const noDrinksWarning = document.createElement("h2")
+    const noDrinksReason = document.createElement("p")
+
+    noDrinksReason.innerText = "No drinks found! Try searching again with a different term."
+    noDrinksWarning.innerText = "Hey, a little drunk already?"
+    noDrinks.appendChild(noDrinksWarning)
+    noDrinks.appendChild(noDrinksReason)
+    main.appendChild(noDrinks);
+    isDrunk.noDrink = true;
+}
+
+function drunk(data) { 
+    
+    if (data.drinks === null) {
+        noDrinksFound();       
+    } else {
+        let drinkCount = data.drinks.length
     for (let i = 0; i < drinkCount; i++) {
         const drinkContainer = document.createElement("article")
         drinkContainer.classList.add('flexCard')
@@ -205,5 +234,5 @@ function drunk(data) { let drinkCount = data.drinks.length
     
         e.target.value = ""
 
-        })*/
+        })*/}
     }
