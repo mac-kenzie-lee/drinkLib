@@ -130,7 +130,7 @@ div#fullbar.wrap.carousel {
 button#slideBack.show {
 
   position: absolute;
-  top: 40vh;
+  top:40vh;
   cursor: pointer;
 border: none;
   z-index: 2;
@@ -151,6 +151,7 @@ main.flex {
 /*slides*/
 article.flexCard.slide {
   align-self: center;
+  justify-content: flex-start;
   width: 100%;
   padding: 1.5rem;
   background-color: var(--main-color-two);
@@ -272,7 +273,7 @@ text-align: left;
 button#slideFront.show {
     cursor: pointer;
   position: absolute;
-  top: 40vh;
+  top:40vh;
   right: 0;
   z-index: 2;
   background-color:#030300;
