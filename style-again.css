@@ -319,7 +319,8 @@ button#slideFront.show {
 
 /*footer*/
 .foot {
-  padding: 4rem 0 2rem 0 ;
+padding-bottom: 1rem;
+padding-top: 1rem;
 align-self: flex-end;
 justify-self: flex-end;
 
