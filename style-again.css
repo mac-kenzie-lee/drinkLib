@@ -330,6 +330,7 @@ justify-self: flex-end;
   color:rgb(171, 171, 171);
   font-family: "Federo", sans-serif;
   text-transform: lowercase;
+  flex-wrap: wrap;
 
 }
 
@@ -369,6 +370,79 @@ form#formli.formli.land {
 form#formli.formli.land input.land {
   width: 200px;
 }
+
+
+@media only screen and (min-width: 500px) {
+  
+img.drinkImg {
+max-width: 400px;
+
+
+}
+  
+article.flexCard.slide {
+
+width: 90%;}
+
+}
+
+@media only screen and (min-width: 722px) {
+  
+  
+  
+form#formli.formli input {
+  width: 300px;
+}
+
+  article.flexCard.slide {
+  
+    width: 80%;
+  }
+  
+}
+@media only screen and (min-width: 974px) {
+  
+  div.drinkInfoContainer {
+    flex-direction: row;
+  }
+
+  .drinkInfoR {
+    padding-top: 2.5rem;
+  }
+  
+  article.flexCard.slide {
+  
+    width: 75%;
+  }}
+  @media only screen and (min-width: 1110px) {
+  
+  
+  
+    article.flexCard.slide {
+    
+      width: 70%;
+    }}
+
+    @media only screen and (min-width: 1310px) {
+  
+  
+  
+      article.flexCard.slide {
+      
+        width: 65%;
+      }}
+
+      
+    @media only screen and (min-width: 1410px) {
+  
+  
+  
+      article.flexCard.slide {
+      
+        width: 50%;
+      }}
+  
+  
 
 
 /*before text entered -> full screen search styling
