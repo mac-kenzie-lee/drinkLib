@@ -1,5 +1,5 @@
 //The user will enter a cocktail. Get a cocktail name, photo, and instructions and place them in the DOM
-const isDrunk = {drunk:0, noDrink:false}
+const isDrunk = {drunk:0, noDrink:false, homeMenu:true}
 document.querySelector('form').addEventListener('submit', getDrink)
 
 document.querySelector('form').addEventListener('click', (f) => {
@@ -24,6 +24,16 @@ const main = document.querySelector("main")
 
 function getDrink(e) {
     e.preventDefault();
+    if (isDrunk.homeMenu === true) {
+        //if the initial search ran it changes the style of the home menu
+        let land = document.querySelectorAll(".land");
+        //removes the land class from all elements
+        land.forEach((e) => {
+            e.classList.remove('land');
+        })
+        isDrunk.homeMenu = false;
+
+    }
     let drink = document.querySelector('input').value;
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`)
         .then(res => res.json())
@@ -62,6 +72,7 @@ function drunk(data) {
     } else {
         let drinkCount = data.drinks.length
     for (let i = 0; i < drinkCount; i++) {
+        console.log(data.drinks[i])
         const drinkContainer = document.createElement("article")
         drinkContainer.classList.add('flexCard')
         drinkContainer.classList.add('slide')
@@ -99,14 +110,22 @@ function drunk(data) {
         drinkGlass.classList.add('drinkGlass')
         let ingred = "";
         for (let k = 1; k <= 15; k++) {
+            let ka = "strMeasure" + k
             let va = "strIngredient" + k;
             if(data.drinks[i][va] !== null) {
                 
                 let ki = data.drinks[i][va];
+                let vi = data.drinks[i][ka];
   
                 let pi = document.createElement("li");
                 pi.classList.add("ingredLi");
-                pi.innerText = ki;
+
+                if (vi !== null) {
+                pi.innerText = vi + " " + ki;
+                } 
+                else {
+                    pi.innerText = ki ;
+                }
                 drinkIngred.appendChild(pi)
             }
         }

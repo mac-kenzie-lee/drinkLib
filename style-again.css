@@ -264,7 +264,7 @@ text-underline-offset: 0.4rem;
 color: var(--main-color-three);
 line-height: 1.7rem;
 font-family: sans-serif;
-text-indent: 0.5rem;
+text-indent: 0.25rem;
 text-align: left;
 
 }
@@ -315,6 +315,64 @@ button#slideFront.show {
     letter-spacing: 0.12ch;
     font-size: 1.2rem;
 } 
+
+/*footer*/
+.foot {
+  padding: 4rem 0 2rem 0 ;
+align-self: flex-end;
+justify-self: flex-end;
+
+}
+
+.ful {
+  display: flex; 
+  gap: 1rem;  font-size: 1.2rem;
+  color:rgb(171, 171, 171);
+  font-family: "Federo", sans-serif;
+  text-transform: lowercase;
+
+}
+
+.ful a {  color:rgb(171, 171, 171);
+
+}
+.ful a:hover {
+  color: var(--main-color-one)
+}
+
+body{
+  min-height: 100vh;
+}
+/*before text entered -> full screen search styling
+styling for the search area to make it full screen before a drink is searched on initial load
+*/
+nav#nav.land {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40vh;
+}
+
+
+nav#nav.land ul.land {
+display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+form#formli.formli.land {
+  gap: 2rem;
+  flex-direction: column;
+
+}
+
+form#formli.formli.land input.land {
+  width: 200px;
+}
+
+
+/*before text entered -> full screen search styling
+*>
 /*
     body {
         background-color: red;
