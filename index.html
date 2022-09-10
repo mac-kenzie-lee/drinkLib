@@ -1,55 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="description" content="This is where your description goes">
-    <meta name="keywords" content="one, two, three">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="This is where your description goes" />
+    <meta name="keywords" content="one, two, three" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Title in the tab</title>
 
-    <script src="https://kit.fontawesome.com/78e8b91adb.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/78e8b91adb.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- external CSS link -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Federo&family=Viaoda+Libre&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Federo&family=Ms+Madi&family=Viaoda+Libre&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="style-again.css" />
+  </head>
 
-<body>
-    <nav id="nav">
-        <ul class="flex-ul" id="flexul">
-            <li class="flex-li">
-                <h1>DrinkLib</h1>
-            </li>
-            <li class="flex-li findDrink">
-
-            </li>
-            <li class="flex-li">
-
-                <form class="formli" id="formli">
-                    <input required placeholder='find a libation' type="text" name="" value="">
-                    <button type="submit" id="formlibtn" name="button"><i class="meep fa-solid fa-martini-glass"></i></button>
-                </form>
-            </li>
-
-        </ul>
+  <body>
+    <nav id="nav" class="land">
+      <ul class="flex-ul land" id="flexul">
+        <li class="flex-li">
+          <h1><a href="/">DrinkLib</a></h1>
+        </li>
+      
+        <li class="flex-li">
+          <form class="formli land" id="formli">
+            <input class="land"
+              required
+              placeholder="find a libation"
+              type="text"
+              name="i"
+              value=""
+            />
+            <button type="submit" id="formlibtn" name="button">
+              <i class="meep fa-solid fa-martini-glass"></i>
+            </button>
+          </form>
+        </li>
+      </ul>
     </nav>
 
-
     <div class="wrap carousel" id="fullbar" data-carousel>
-        <button class="slide hide" data-carousel-button="prev" id="slideBack">&#8249;</button>
-        <button class="slide hide" data-carousel-button="next" id="slideFront">&#8250;</button>
+<button class="hide" data-carousel-button="prev" id="slideBack">
+    <i class="fa-solid fa-arrow-left"></i>
+      </button>
 
-        <main class="flex " data-slides>
+  
 
-
-        </main>
-
+      <main class="flex" data-slides></main>
+      <button class="hide" data-carousel-button="next" id="slideFront">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
     </div>
-    <script type="text/javascript" src="js/main.js"></script>
-</body>
-
+    <footer class="foot"><ul class="ful"><li>Code by Mackenzie made using <a href="#">cocktaildb</a></li><li><a href="github">Github</a></li>
+    <li><a href="https://mackenziedev.com">Website</a></li></ul></footer>
+    <script src="js/main.js"></script>
+  </body>
 </html>
