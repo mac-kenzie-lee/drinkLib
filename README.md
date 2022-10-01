@@ -28,11 +28,13 @@ This was a great time for me to work with CSS variables, and I gained more exper
 <br> 
 <hr> 
 
-## My Other Projects
+## Projects
 <br>
+
 | <a href="https://github.com/mac-kenzie-lee/drinkLib"><img src="https://github.com/mac-kenzie-lee/drinkLib/blob/master/large-small-dlib.gif?raw=true" alt="small mobile gif of drink lib"></a>  | <a href="https://github.com/mac-kenzie-lee/storyCrafter"><img src="https://github.com/mac-kenzie-lee/storyCrafter/blob/main/storyCrafterGif2.gif?raw=true" alt="Screenshot gif for story crafter"></a> | <a href="https://github.com/mac-kenzie-lee/rockPaperScissorsGame"><img src="https://github.com/mac-kenzie-lee/rockPaperScissorsGame/blob/main/rps.gif?raw=true" alt="rock paper scissors website demo"> </a>| <a href="https://github.com/mac-kenzie-lee/not-too-boring/"><img src="https://github.com/mac-kenzie-lee/not-too-boring/blob/main/nottooboring.gif?raw=true" alt="Not Too Boring website demonstration"></a> | <a href="https://github.com/mac-kenzie-lee/etch-a-sketch-project"><img src="https://github.com/mac-kenzie-lee/etch-a-sketch-project/blob/main/etchasketch.gif?raw=true" alt="Etch a sketch demo"></a> |
 | :---:   | :---:   | :---: | :---: | :---: |
 | **[DrinkLib](https://github.com/mac-kenzie-lee/drinkLib)**  | **[Story Crafter](https://github.com/mac-kenzie-lee/storyCrafter)**  | **[Rock Paper Scissors](https://github.com/mac-kenzie-lee/rockPaperScissorsGame)** | **[Not Too Boring](https://github.com/mac-kenzie-lee/not-too-boring/)**  | **[Etch A Sketch Project](https://github.com/mac-kenzie-lee/etch-a-sketch-project)** |
 |  Find your next cocktail | Remember your wins & grow your career | Bright, simple challenge VS the computer. | Rainy, hot, cold days won't stop you from having a good time in these cities... | A retro throwback drawing application allows for pixelated sketching |
 <br>
 <hr>
+
