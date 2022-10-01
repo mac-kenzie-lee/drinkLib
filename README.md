@@ -7,6 +7,7 @@ Find drinks to make, utilizes cocktaildb to generate recipes for your favorite l
 <img src="https://github.com/mac-kenzie-lee/drinkLib/blob/master/large-small-dlib.gif?raw=true" alt="small mobile gif of drink lib">
 
 </p>
+
 ## How It's Made:
 
 **Tech used:** HTML, CSS, JavaScript, CocktailDB Api
