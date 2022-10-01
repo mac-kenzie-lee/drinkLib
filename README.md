@@ -2,7 +2,7 @@
 
 Find drinks to make, utilizes cocktaildb to generate recipes for your favorite libations.
 
-**Link to project:** https://mackenziedev.com/projects/drinkLib/
+**Link to project:** https://drinklib.mackenziedev.com/
 
 <p align="center">
 <img src="https://github.com/mac-kenzie-lee/drinkLib/blob/master/drink-lib.gif?raw=true" alt="DrinkLib gif site in action" width="550px" height="auto">
