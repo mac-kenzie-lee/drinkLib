@@ -3,11 +3,11 @@
 Find drinks to make, utilizes cocktaildb to generate recipes for your favorite libations.
 
 **Link to project:** https://drinklib.mackenziedev.com/
-
 <p align="center">
-<img src="https://github.com/mac-kenzie-lee/drinkLib/blob/master/drinklib.gif?raw=true" alt="DrinkLib gif site in action" width="auto" height="400px"></p>
+<img src="https://github.com/mac-kenzie-lee/drinkLib/blob/master/large-small-dlib.gif?raw=true" alt="small mobile gif of drink lib">
+<img src="https://github.com/mac-kenzie-lee/drinkLib/blob/master/smalldr.gif?raw=true" alt="large web demo gif of drink lib">
 
-
+</p>
 ## How It's Made:
 
 **Tech used:** HTML, CSS, JavaScript, CocktailDB Api
